@@ -4,7 +4,8 @@ const ProductDescription = ({currentProduct}) => {
       <div id="title">{currentProduct.title}</div>
       <img id="image" src={currentProduct.image}/>
       <div id="price">${currentProduct.price}</div>
-      <div id="rating">Rating: {currentProduct.rating.rate}</div>
+      <div id="rating">Rating: {currentProduct.rating.rate} /5 ★</div>
+      <div id="text">ON SALE!!!</div>
     </div>
   )
 }
