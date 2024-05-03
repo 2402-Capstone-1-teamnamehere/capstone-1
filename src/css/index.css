@@ -109,3 +109,24 @@ h1 {
 #productCount {
   color: aliceblue;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  border-left: solid whitesmoke 8px;
+}
+
+.label {
+  border: solid black 5px;
+  max-width: fit-content;
+}
+
+#loginButton {
+  border: solid black 5px;
+  max-width: fit-content;
+}
+
+#registerButton {
+  border: solid black 5px;
+  max-width: fit-content;
+}
