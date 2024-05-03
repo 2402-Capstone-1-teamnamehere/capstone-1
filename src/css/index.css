@@ -67,3 +67,45 @@ h1 {
   font-size: 30px;
   margin-top: 15px;
 }
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#productImage {
+  display: flex;
+  max-width: 500px;
+  max-height: 600px;
+  border: ridge 10px rgb(233, 233, 233);
+  margin-bottom: 10px;
+}
+
+#productTitle {
+  color: aliceblue;
+  font-size: 25px;
+}
+
+#productCategory {
+  color: lightgoldenrodyellow;
+}
+
+#productDescription {
+  color: aliceblue;
+  max-width: 700px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#productPrice {
+  color: aliceblue;
+}
+
+#productRate {
+  color: yellow;
+}
+
+#productCount {
+  color: aliceblue;
+}
