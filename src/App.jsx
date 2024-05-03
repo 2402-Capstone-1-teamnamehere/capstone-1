@@ -1,15 +1,17 @@
 import { useState } from 'react';
-import './App.css';
-import { Routes, Route, Link} from 'react-router-dom'
+import { Routes, Route, Link} from 'react-router-dom';
+import './css/App.css';
+import AllProducts from './components/GetAllProducts';
 
-const BASE_API_URL = "https://fakestoreapi.com/"
+const BASE_API_URL = "https://fakestoreapi.com"
 
 function App() {
 
   return (
     <>
-      <h1>Under construction...</h1>
+    <h1>F.I.T.E.M.I</h1>
 
+      <AllProducts BASE_API_URL={BASE_API_URL}/>
 
     </>
   )
