@@ -1,3 +1,4 @@
+/* HOME PAGE */
 h1 {
   display: flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -20,7 +21,7 @@ h1 {
   width: 250px;
   height: 520px;
   margin: 40px;
-  padding: 30px 70px;
+  padding: 40px 70px;
   border: dashed 5px whitesmoke;
   align-items: center;
   justify-content: center;
@@ -68,11 +69,24 @@ h1 {
   margin-top: 15px;
 }
 
+
+/* NAVBAR COMPONENT */
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  background-color: aqua;
+  font-family: fantasy;
+  font-size: larger;
+}
+
+
+/* SINGLE PRODUCT PAGE */
 .details {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 80px;
 }
 
 #productImage {
@@ -81,11 +95,12 @@ h1 {
   max-height: 600px;
   border: ridge 10px rgb(233, 233, 233);
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 #productTitle {
   color: aliceblue;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 #productCategory {
@@ -100,6 +115,9 @@ h1 {
 
 #productPrice {
   color: aliceblue;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 40px;
 }
 
 #productRate {
@@ -110,6 +128,13 @@ h1 {
   color: aliceblue;
 }
 
+#productButton {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+/* LOGIN COMPONENT */
 .login {
   display: flex;
   flex-direction: column;
@@ -129,4 +154,41 @@ h1 {
 .logRegButton:hover {
   background-color: lightblue;
   cursor: pointer;
+}
+
+
+/* REGISTRATION PAGE */
+.form {
+  display: flex;
+  flex-direction: column;
+  color: azure;
+  align-items: center;
+}
+
+h2 {
+  color: azure;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
+
+/* MISCELLANEOUS */
+
+#help {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+#jeff {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+#jeffimg {
+  border-radius: 50%;
+  max-width: 800px;
 }

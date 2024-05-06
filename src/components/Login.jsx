@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   return (
     <>
@@ -18,7 +20,7 @@ const Login = () => {
           </input>
         </label>
         <button className="logRegButton">Login</button>
-        <button className="logRegButton">Register</button>
+        <button onClick={()=>navigate("/register")} className="logRegButton">Register</button>
       </form>
     </>
   )

@@ -8,12 +8,11 @@ const SingleProduct = ({BASE_API_URL}) => {
   
   const GetProductDetails = async() => {
     try {
-      console.log(ID)
       const response = await fetch(`${BASE_API_URL}/products/${ID}`)
       const result = await response.json()
       setProduct(result);
       setRating(result.rating);
-      console.log(product)
+      console.log(result)
     } catch(error) {console.log(error)}
   }
   
@@ -30,7 +29,7 @@ const SingleProduct = ({BASE_API_URL}) => {
       <div id="productPrice">${product.price}</div>
       <div id="productRate">Rating: {rating.rate} /5★</div>
       <div id="productCount">Reviews: {rating.count}</div>
-      <button>Add to Cart</button>
+      <button id="productButton">Add to Cart</button>
     </div>
   )
 }
