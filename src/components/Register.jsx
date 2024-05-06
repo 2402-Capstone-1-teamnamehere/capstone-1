@@ -22,7 +22,7 @@ const RegisterForm = ({BASE_API_URL, token, setToken}) => {
   //   try {
   //     const response = await fetch(`${BASE_API_URL}/users`, {
   //       method: "POST",
-  //       body:JSON.stringify({
+  //       body: JSON.stringify({
   //         email,
   //         username,
   //         password,

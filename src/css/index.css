@@ -133,12 +133,17 @@ h1 {
   margin-top: 10px;
 }
 
+#productButton:hover {
+  background-color: lightblue;
+}
+
 
 /* LOGIN COMPONENT */
 .login {
   display: flex;
   flex-direction: column;
   border-left: solid whitesmoke 8px;
+  margin-top: 15px;
 }
 
 .label {
@@ -146,14 +151,31 @@ h1 {
   max-width: fit-content;
 }
 
-.logRegButton {
+#loginButton {
   border: solid black 5px;
   max-width: fit-content;
+  font-weight: bolder;
 }
 
-.logRegButton:hover {
+#loginButton:hover {
   background-color: lightblue;
   cursor: pointer;
+}
+
+#register {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  color: aliceblue;
+}
+
+#registerLink {
+  display: flex;
+  color: red;
+  align-items: center;
+  margin-left: 8px;
 }
 
 
