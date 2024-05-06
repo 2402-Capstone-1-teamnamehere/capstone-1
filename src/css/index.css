@@ -121,12 +121,12 @@ h1 {
   max-width: fit-content;
 }
 
-#loginButton {
+.logRegButton {
   border: solid black 5px;
   max-width: fit-content;
 }
 
-#registerButton {
-  border: solid black 5px;
-  max-width: fit-content;
+.logRegButton:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }

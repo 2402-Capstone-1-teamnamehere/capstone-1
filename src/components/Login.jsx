@@ -13,12 +13,12 @@ const Login = () => {
           </input>
         </label>
         <label className="label">
-          <input type="text" placeholder="password" value={password}
+          <input type="password" placeholder="password" value={password}
           onChange={(e) => setPassword(e.target.value)}>
           </input>
         </label>
-        <button id="loginButton">Login</button>
-        <button id="registerButton">Register</button>
+        <button className="logRegButton">Login</button>
+        <button className="logRegButton">Register</button>
       </form>
     </>
   )
