@@ -22,6 +22,7 @@ const UserCarts = ({BASE_API_URL}) => {
   
   return (
     <>
+      <h2 id="h2B">Shopping Cart</h2>
       <section className="carts">
         {
           usercarts.map((currentUserCart) => {

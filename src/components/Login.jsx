@@ -4,7 +4,6 @@ import { useNavigate, Link } from 'react-router-dom';
 const Login = ({BASE_API_URL}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   const authenticate = async(e) => {
     e.preventDefault();
@@ -18,7 +17,8 @@ const Login = ({BASE_API_URL}) => {
         })
       })
       const result = await response.json()
-      console.log(result)
+      const token = result.token
+      console.log(token)
       
     } catch(error) {console.log(error)}
   }

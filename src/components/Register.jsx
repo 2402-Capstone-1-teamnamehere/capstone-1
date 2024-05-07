@@ -46,7 +46,7 @@ const RegisterForm = ({BASE_API_URL, token, setToken}) => {
 
     return (
       <>
-        <h2>Demo Registration Form</h2>
+        <h2 id="h2A">Demo Registration Form</h2>
 
         <form className="form">
           <label>
