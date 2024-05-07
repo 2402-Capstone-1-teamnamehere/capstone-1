@@ -13,6 +13,7 @@ const SingleProduct = ({BASE_API_URL}) => {
       setProduct(result);
       setRating(result.rating);
       console.log(result)
+      
     } catch(error) {console.log(error)}
   }
   

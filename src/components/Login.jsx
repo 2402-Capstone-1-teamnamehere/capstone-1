@@ -6,7 +6,9 @@ const Login = ({BASE_API_URL}) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const authenticate = async() => {
+  const authenticate = async(e) => {
+    e.preventDefault();
+
     try {
       const response = await fetch(`${BASE_API_URL}/auth/login`, {
         method: 'POST',
@@ -17,6 +19,7 @@ const Login = ({BASE_API_URL}) => {
       })
       const result = await response.json()
       console.log(result)
+      
     } catch(error) {console.log(error)}
   }
 
@@ -25,19 +28,20 @@ const Login = ({BASE_API_URL}) => {
       <form className="login" onSubmit={authenticate}>
         <label className="label">
           <input type="text" placeholder="username" value={username}
-          onChange={(e) => setUsername(e.target.value)}>
-          </input>
+          onChange={(e) => setUsername(e.target.value)}/>
         </label>
+
         <label className="label">
           <input type="password" placeholder="password" value={password}
-          onChange={(e) => setPassword(e.target.value)}>
-          </input>
+          onChange={(e) => setPassword(e.target.value)}/>
         </label>
+
         <input id="loginButton" type="submit" value="LOGIN"/>
       </form>
+
       <div id="register">
         <p>Don't have an account?</p>
-        <Link id="registerLink" to="/register">Click here!</Link>
+        <Link id="registerLink" to="/register">Register here!</Link>
       </div>
     </>
   )
