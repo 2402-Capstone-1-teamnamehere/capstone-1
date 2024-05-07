@@ -252,6 +252,7 @@ p {
   display: flex;
   margin-left: 95.5%;
   font-size: 15px;
+  margin-bottom: 8px;;
 }
 
 #deleteButton:hover {
@@ -264,4 +265,10 @@ p {
   display: flex;
   justify-content: center;
   font-size: 30px;
+}
+
+#removeMessage {
+  display: flex;
+  justify-content: right;
+  color: red;
 }

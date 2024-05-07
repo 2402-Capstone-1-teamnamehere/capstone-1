@@ -1,4 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+import DeleteCart from './DeleteCart';
+
+const BASE_API_URL = "https://fakestoreapi.com"
 
 const CartContents = ({currentUserCart}) => {
   const cartItems = currentUserCart.products;
@@ -21,7 +24,7 @@ const CartContents = ({currentUserCart}) => {
         })}
       </div>
     </div>
-    <button id="deleteButton">Delete Cart</button>
+    <DeleteCart BASE_API_URL={BASE_API_URL} currentCart={currentUserCart}/>
   </> 
   )
 }
