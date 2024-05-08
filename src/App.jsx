@@ -10,6 +10,7 @@ import Support from './components/Support';
 import Profile from './components/Profile';
 import UserCarts from './components/UserCarts';
 import Logout from './components/Logout';
+import RequireLogin from './components/RequireLogin';
 
 const BASE_API_URL = "https://fakestoreapi.com"
 
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar token={token}/>
 
       <Routes>
         <Route path='/' element={
@@ -26,38 +27,49 @@ function App() {
             {
               !token ? 
               <Login setToken={setToken} BASE_API_URL={BASE_API_URL}/> : 
-              <Logout />
+              <Logout setToken={setToken}/>
             } 
               <h1>F.I.T.E.M.I</h1>
               <AllProducts BASE_API_URL={BASE_API_URL}/>
           </>
         }/>
+
         <Route path='/products/:ID' element={
           <>
-            {token ? <Logout /> : null}
+            {token ? <Logout setToken={setToken}/> : null}
             <SingleProduct BASE_API_URL={BASE_API_URL}/>
           </>
         }/>
+
         <Route path='/register' element={
           <>
-            {token ? <Logout /> : null}
+            {token ? <Logout setToken={setToken}/> : null}
             <RegisterForm BASE_API_URL={BASE_API_URL} token={token} setToken={setToken}/>
           </>
         }/>
+
         <Route path='/support' element={
           <>
-            {token ? <Logout /> : null}
+            {token ? <Logout setToken={setToken}/> : null}
             <Support />
           </>  
         }/>
+
         <Route path='/profile' element={
           <>
-            {token ? <Logout /> : null}
+            <Logout setToken={setToken}/>
             <Profile />
           </>
         }/>
-        <Route path='/carts/user/:userID' element={<UserCarts BASE_API_URL={BASE_API_URL}/>} />
 
+        <Route path='/carts/user/:userID' element={
+          <>
+            {token ? <Logout setToken={setToken}/> : null}
+            <UserCarts BASE_API_URL={BASE_API_URL}/>
+          </>
+        }/>
+
+        <Route path='/notlogin' element={<RequireLogin token={token} setToken={setToken} BASE_API_URL={BASE_API_URL}/>} />
       </Routes>
 
     </>
@@ -65,5 +77,3 @@ function App() {
 }
 
 export default App
-
-// condition ? show : null

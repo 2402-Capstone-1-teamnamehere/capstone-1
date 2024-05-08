@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom"
 
-const Logout = () => {
+const Logout = ({setToken}) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     localStorage.removeItem("token")
+    setToken("")
     navigate("/");
   }
   

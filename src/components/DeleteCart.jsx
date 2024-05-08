@@ -13,14 +13,11 @@ const DeleteCart = ({BASE_API_URL, currentCart}) => {
       setCart(result)
       console.log(cart)
     } catch(error) {console.log(error)}
+
+    return <div id="removeMessage">Cart ID #{cart.id} has been removed.</div>
   }
   return (
-    <>
       <button id="deleteButton" onClick={Delete}>Delete Cart</button>
-      {
-        <div id="removeMessage">Cart ID #{cart.id} has been removed.</div>
-      }
-    </>
   )
 }
 

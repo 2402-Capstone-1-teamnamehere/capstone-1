@@ -5,6 +5,7 @@ h1 {
   font-size: 70px;
   color: aquamarine;
   justify-content: center;
+  text-shadow: 8px 7px 5px black;
 }
 
 .main {
@@ -220,23 +221,9 @@ p {
   margin-top: 80px;
 }
 
-/* MISCELLANEOUS */
-
-#help {
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
-}
-
-#jeff {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-}
-
-#jeffimg {
-  border-radius: 50%;
-  max-width: 800px;
+#address {
+  margin-bottom: 1px;
+  font-weight: bold;
 }
 
 
@@ -295,4 +282,37 @@ p {
   display: flex;
   justify-content: right;
   color: red;
+}
+
+
+/* MISCELLANEOUS */
+
+#help {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+#jeff {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+#jeffimg {
+  border-radius: 50%;
+  max-width: 800px;
+}
+
+.requireLog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logMsg {
+  color: orange;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
