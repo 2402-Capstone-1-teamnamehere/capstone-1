@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-const Login = ({BASE_API_URL}) => {
+const Login = ({BASE_API_URL, setToken}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -11,13 +11,16 @@ const Login = ({BASE_API_URL}) => {
     try {
       const response = await fetch(`${BASE_API_URL}/auth/login`, {
         method: 'POST',
-        body: JSON.stringify({
+        body: new URLSearchParams({
           username,
           password
         })
       })
       const result = await response.json()
+      console.log(result)
       const token = result.token
+      setToken(token)
+      localStorage.setItem("token", token)
       console.log(token)
       
     } catch(error) {console.log(error)}

@@ -17,9 +17,10 @@ const DeleteCart = ({BASE_API_URL, currentCart}) => {
   return (
     <>
       <button id="deleteButton" onClick={Delete}>Delete Cart</button>
-      <div id="removeMessage">Cart ID #{cart.id} has been removed.</div>
+      {
+        <div id="removeMessage">Cart ID #{cart.id} has been removed.</div>
+      }
     </>
-
   )
 }
 
