@@ -298,8 +298,9 @@ p {
 
 #help {
   display: flex;
-  justify-content: center;
+  align-items: center;
   margin-top: 200px;
+  flex-direction: column;
 }
 
 #jeff {
@@ -323,4 +324,11 @@ p {
   font-size: 30px;
   margin-top: 50px;
   margin-bottom: 20px;
+}
+
+#call {
+  color: papayawhip;
+  font-size: 90px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 20px;
 }
