@@ -305,12 +305,11 @@ p {
 #jeff {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 150px;
 }
 
 #jeffimg {
   border-radius: 50%;
-  max-width: 800px;
 }
 
 .requireLog {
