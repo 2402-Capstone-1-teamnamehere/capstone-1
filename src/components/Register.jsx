@@ -106,7 +106,7 @@ const RegisterForm = ({BASE_API_URL, token, setToken}) => {
             <input type="text" size={30} value={state} onChange={(e)=>{setState(e.target.value)}}/>
           </label>
           <br/> <br/>
-          <button onClick={()=>navigate("/profile")}className="logRegButton">Submit</button>
+          <button onClick={()=>navigate("/profile")} className="logRegButton">Submit</button>
         </form>
       </>
     )

@@ -84,6 +84,10 @@ h1 {
   background-color: aqua;
   font-family: fantasy;
   font-size: larger;
+  box-shadow: inset 8px 8px 6px;
+  margin-top: 10px;
+  padding-top: 12px;
+  padding-bottom: 2px;
 }
 
 
@@ -224,6 +228,11 @@ p {
 #address {
   margin-bottom: 1px;
   font-weight: bold;
+}
+
+.logRegButton:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }
 
 
